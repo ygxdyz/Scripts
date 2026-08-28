@@ -7,14 +7,14 @@
  * 通知：签到完成后弹 1 条结果到 QX 通知中心
  *
  * BoxJs 配置：
- *   tlg_token        Bearer token（不含 "Bearer " 前缀）
+ *   tlzn_token        Bearer token（不含 "Bearer " 前缀）
  *   plusplus_token   PushPlus token（可选，留空=不推送）
  */
 
 const $ = new Env()
 
 // ========== BoxJs 读取配置 ==========
-const TLG_TOKEN = $.read("tlg_token") || ""
+const TLG_TOKEN = $.read("tlzn_token") || ""
 const PUSH_TOKEN = $.read("plusplus_token") || ""
 
 // ========== 常量 ==========
