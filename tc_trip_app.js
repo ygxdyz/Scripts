@@ -17,21 +17,21 @@ cron 30 9 * * * tc_trip_app.js
 
 # Surge
 [Script]
-同程APP抓包 = type=http-request,pattern=^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex,requires-body=0,max-size=0,script-path=脚本路径
+同程APP抓包 = type=http-request,pattern=^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/tc_trip_app.js
 [MITM]
 hostname = app.17u.cn
 
 # Loon
 [Script]
-http-request ^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex script-path=脚本路径, requires-body=false, timeout=10
+http-request ^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/tc_trip_app.js, requires-body=false, timeout=10
 
 # Quantumult X
 [rewrite_local]
-^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex url script-request-header 脚本路径
+^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex url script-request-header https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/tc_trip_app.js
 
 # Shadowrocket
 [Script]
-http-request ^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex script-path=脚本路径
+http-request ^https:\/\/app\.17u\.cn\/welfarecenter\/index\/signIndex script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/tc_trip_app.js
 
 [MITM]
 hostname = app.17u.cn
