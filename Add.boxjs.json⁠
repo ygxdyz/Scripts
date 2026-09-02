@@ -1,0 +1,42 @@
+{
+  "id": "My_BoxJS_Sub",
+  "name": "个人BoxJS订阅",
+  "author": "add",
+  "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/cfmoto.png",
+  "repo": "https://github.com/",
+  "apps": [
+    {
+      "id": "jlc",
+      "name": "嘉立创",
+      "keys": [
+        "jlc_data",
+        "jlc_account"
+      ],
+      "author": "@Add",
+      "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/cfmoto.png",
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "jlc_account",
+          "name": "春风摩托账号密码",
+          "val": "",
+          "type": "textarea",
+          "desc": "手机号与密码，格式为 手机号#密码 (多账号用 @ 或 换行 分开)"
+        },
+        {
+          "id": "jlc_data",
+          "name": "春风摩托Cookie数据",
+          "val": "",
+          "type": "textarea",
+          "desc": "抓包获取的 Cookie 数据"
+        }
+      ]
+    }
+  ]
+}
