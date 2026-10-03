@@ -1,0 +1,57 @@
+{
+  "id": "meiju.app.sub",
+  "name": "美居社区订阅",
+  "author": "@ygxdyz",
+  "icon": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/meiju.png",
+  "repo": "https://github.com/ygxdyz/Scripts",
+  "apps": [
+    {
+      "id": "meiju",
+      "name": "美的会员-美居社区",
+      "icon": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/meiju.png",
+      "keys": [
+        "midea_data",
+        "midea_meiju_token",
+        "midea_meiju_num"
+      ],
+      "settings": [
+        {
+          "id": "midea_data",
+          "name": "账号数据 (与V2共用)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "[{\"uid\":\"xxx\",\"skey\":\"xxx\"}]",
+          "autoGrow": true,
+          "desc": "与V2主脚本共用同一份数据(抓法同V2)。支持JSON数组[{\"uid\":\"\",\"skey\":\"\"}]或uid#skey&uid#skey字符串。脚本会把每日完成状态(signState)写回此字段"
+        },
+        {
+          "id": "midea_meiju_token",
+          "name": "美居凭证 tokenPwd (点赞用)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "tokenPwd#userId",
+          "autoGrow": true,
+          "desc": "一次性抓取永久免密: ProxyPin不装证书抓包 → 打开美居App → 找alias=/mj/user/autoLogin请求 → body的tokenPwd+头的userId, 填 tokenPwd#userId。多账号&分隔(按顺序对应)或JSON{\"手机号\":\"tokenPwd#userId\"}。脚本App同款自动续期"
+        },
+        {
+          "id": "midea_meiju_num",
+          "name": "任务数量 (浏览,点赞)",
+          "val": "5,5",
+          "type": "$text",
+          "placeholder": "5,5",
+          "autoGrow": true,
+          "desc": "格式: 浏览数,点赞数,默认5,5。当日已自动幂等跳过,帖子素材自动去重换新"
+        }
+      ],
+      "author": "@ygxdyz",
+      "repo": "https://github.com/ygxdyz/Scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/meiju.png",
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/meiju.png"
+      ]
+    }
+  ],
+  "icons": [
+    "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/meiju.png"
+  ]
+}
