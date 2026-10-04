@@ -1,0 +1,158 @@
+{
+  "id": "Jay.app.sub",
+  "name": "Jay 订阅",
+  "author": "@ygxdyz",
+  "icon": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/qq.png",
+  "repo": "https://github.com/ygxdyz/Scripts",
+  "apps": [
+    {
+      "id": "ghac",
+      "name": "广汽本田签到",
+      "icon": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/gqbt.png",
+      "keys": [
+        "ghac_pass",
+        "ghac_conf"
+      ],
+      "settings": [
+        {
+          "id": "ghac_pass",
+          "name": "密码表 (JSON)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "{\"手机号\":\"密码\"}",
+          "autoGrow": true,
+          "desc": "纯密码模式：填 {\"手机号\":\"密码\"}，多账号逗号分隔。配了密码的账号每次运行自动密码登录获取全新会话（token 不再保存复用，无需关心过期/被踢），自动完成签到+浏览5+点赞10+分享2。密码只存手机本地 QX 存储，脚本不放行任何外部上报。没填的账号沿用 ghac_capture.js 捕获的凭据"
+        },
+        {
+          "id": "ghac_conf",
+          "name": "任务配置 (JSON)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "{\"points_delay\":240}",
+          "autoGrow": true,
+          "desc": "points_delay=积分入账等待秒数（默认随机180~300，服务端入账有1~2分钟延迟，等完再读才有真实的「今日+N」）。留空走脚本默认。改完保留 JSON 结构，别删整键"
+        }
+      ],
+      "scripts": [
+        {
+          "name": "▶ 立即运行一次",
+          "script": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/ghac_daily.js"
+        }
+      ],
+      "author": "@ygxdyz",
+      "repo": "https://github.com/ygxdyz/Scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/gqbt.png",
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/gqbt.png"
+      ]
+    },
+    {
+      "id": "bingrewards",
+      "name": "Bing Rewards",
+      "icon": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/bing.png",
+      "keys": [
+        "bingrewards_conf",
+        "bingrewards_pass"
+      ],
+      "settings": [
+        {
+          "id": "bingrewards_conf",
+          "name": "任务配置 (JSON)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "{\"per_run\":1}",
+          "autoGrow": true,
+          "desc": "per_run=每轮执行账号数（1=轮换模式，多号错峰；0或留空=每轮全跑）。random_delay_max=启动随机延迟分钟数（默认25，手动测试嫌等可填0）。enable_search/enable_quiz/enable_activities 填 false 可关对应任务。留空走脚本内联默认"
+        },
+        {
+          "id": "bingrewards_pass",
+          "name": "密码表 (可选, JSON数组)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "[{\"username\":\"a@outlook.com\",\"password\":\"pass\",\"otpauth\":\"\"}]",
+          "autoGrow": true,
+          "desc": "备选登录方式，数组支持多号；有两步验证填 otpauth 完整链接。捕获到的账号优先，与此表不冲突"
+        }
+      ],
+      "author": "@ygxdyz",
+      "repo": "https://github.com/ygxdyz/Scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/bing.png",
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/bing.png"
+      ]
+    },
+    {
+      "id": "lcky",
+      "name": "立创开源签到",
+      "icon": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/jlc.PNG",
+      "keys": [
+        "lcky_data",
+        "lcky_pass",
+        "lcky_pending_login"
+      ],
+      "settings": [
+        {
+          "id": "lcky_pass",
+          "name": "密码表 (JSON)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "{\"17741931316\":\"密码1\",\"13666663315\":\"密码2\",\"13309896835\":\"密码3\"}",
+          "autoGrow": true,
+          "desc": "JSON格式：{\"手机号\":\"密码\"}，多账号逗号分隔；账号掩码手机号（177****1316）自动匹配全号。Cookie过期时脚本自动密码登录续期，并种下绑定脚本自身设备指纹的30天免密令牌——密码不改则永久自动续期。密码只存手机本地QX存储，不经过任何第三方"
+        }
+      ],
+      "author": "@ygxdyz",
+      "repo": "https://github.com/ygxdyz/Scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/jlc.PNG",
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/jlc.PNG"
+      ]
+    },
+    {
+      "id": "ftej",
+      "name": "福田e家",
+      "icon": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/ftej.png",
+      "keys": [
+        "ftej_data",
+        "ftej_cap",
+        "ftej_diag"
+      ],
+      "settings": [
+        {
+          "id": "ftej_diag",
+          "name": "诊断命令（删号 / 清空）",
+          "val": "",
+          "type": "$text",
+          "placeholder": "DEL:17312349920",
+          "autoGrow": true,
+          "desc": "填命令→保存→点下方「运行诊断」或QX运行ftej_diag.js生效。① DEL:手机号=精准删除该账号档案（App单设备换号后旧号JWT已被踢死时用），多个号逗号分隔如 DEL:17312349920,13912345678 ② RESET=清空全部抓包数据重抓（之后App退出登录→短信验证码登录→进会员中心→再跑诊断） ③ 平时此键是诊断报告(JSON)，无需手改；要下命令时整个值只写命令本身"
+        },
+        {
+          "id": "ftej_data",
+          "name": "账号配置 (JSON)",
+          "val": "",
+          "type": "$text",
+          "placeholder": "{\"cfg\":{\"pwdAccounts\":{\"13660643315\":\"密码\"}}}",
+          "autoGrow": true,
+          "desc": "pwdAccounts=密码账号表{\"手机号\":\"密码\"}，配了密码的账号走全自动（每日密码登录+💓心跳续命+签到三级降级）。ignoreAccounts=忽略清单（如 [\"17312349920\"]，捕获档案里有它但不想自动跑）。debug.hist/lastRun 是运行记录自动维护，别删整键、改完保留原结构"
+        }
+      ],
+      "scripts": [
+        {
+          "name": "▶ 运行诊断",
+          "script": "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/ftej_diag.js"
+        }
+      ],
+      "author": "@ygxdyz",
+      "repo": "https://github.com/ygxdyz/Scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/ftej.png",
+        "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/ftej.png"
+      ]
+    }
+  ],
+  "icons": [
+    "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/qq.png",
+    "https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/qq.png"
+  ]
+}
