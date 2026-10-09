@@ -1,0 +1,31 @@
+# NAME: Bing Microsoft Rewards
+# HOST-SUFFIX: 16
+
+
+# 说明：bing.com 一条后缀规则已覆盖 www / cn / rewards 全部子域名
+
+# >> Bing 核心（搜索 / 网页积分）
+host-suffix,bing.com,Bing
+host-suffix,bing.com.cn,Bing
+host-suffix,bing.net,Bing
+
+# >> Microsoft 登录链（令牌签发 / 授权跳转 / 消费者登录 / 密码登录）
+host-suffix,login.microsoftonline.com,Bing
+host-suffix,login.windows.net,Bing
+host-suffix,login.live.com,Bing
+host-suffix,login.microsoft.com,Bing
+
+# >> Microsoft 账号页（安全验证 / 中断页 / 账号管理）
+host-suffix,account.live.com,Bing
+host-suffix,account.microsoft.com,Bing
+
+# >> Rewards 积分 API（dapi 任务全链路）
+host-suffix,rewardsplatform.microsoft.com,Bing
+
+# >> Bing 扩展（blackmatrix7 收录：广告 / 沙盒 / 营销站，无核心功能）
+host-suffix,bingads.com,Bing
+host-suffix,bingagencyawards.com,Bing
+host-suffix,bingapistatistics.com,Bing
+host-suffix,bingsandbox.com,Bing
+host-suffix,bingvisualsearch.com,Bing
+host-suffix,bingworld.com,Bing
