@@ -13,11 +13,11 @@ new Env('春风摩托');
 http-response ^https:\/\/c\.cfmoto\.com\/jv\/user\/user_info script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/cfmoto.js, requires-body=true, timeout=60, tag=春风摩托 Cookie
 
 # 脚本任务(每日)
-cron "0 7 * * *" script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/cfmoto.js, tag=春风摩托
+# cron "0 7 * * *" script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/cfmoto.js, tag=春风摩托
 
 # 周五自动抽奖：疯狂星期五活动每周五10:00~23:59
 # 当日任务已完成时会自动跳过每日任务, 仅执行抽奖(注: script-path 请指向本脚本实际地址, 时间可按需调整)
-cron "35 20 * * 5" script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/cfmoto.js, tag=春风摩托周五抽奖
+# cron "35 20 * * 5" script-path=https://raw.githubusercontent.com/ygxdyz/Scripts/refs/heads/main/cfmoto.js, tag=春风摩托周五抽奖
 
 [Rewrite]
 # 开屏广告
