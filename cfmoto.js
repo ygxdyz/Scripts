@@ -44,7 +44,7 @@ $.notifyMsg = [];
 
 //---------------------- 疯狂星期五抽奖: H5接口签名工具 ----------------------
 // Cfmoto-X-Sign = MD5(SHA1(query+body+appId&nonce&timestamp+appSecret))
-// appId/appSecret 为春风H5网页公开JS包中的客户端常量(任何人都可从其官网下载, 非用户隐私, 仅用于周五抽奖请求签名)
+// appId/appSecret 春风H5网页公开JS包(仅用于周五抽奖请求签名)
 const CfmotoCfg = {
   appId: "xFcWmLnA",
   appSecret: "d8a46a5e344327e83b5334f6d1102bbe363579d2"
