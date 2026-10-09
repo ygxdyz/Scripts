@@ -1,0 +1,19 @@
+# > Microsoft Bing Rewards
+# 账号注册区=中国 → 微软/必应全链直连
+# 说明：bing.com 一条后缀规则已覆盖 www / cn / rewards 全部子域名
+
+# >> Bing 搜索 + 网页积分
+host-suffix,bing.com,DIRECT
+
+# >> Microsoft 登录链（令牌签发 / 授权跳转 / 消费者登录 / 密码登录）
+host-suffix,login.microsoftonline.com,DIRECT
+host-suffix,login.windows.net,DIRECT
+host-suffix,login.live.com,DIRECT
+host-suffix,login.microsoft.com,DIRECT
+
+# >> Microsoft 账号页（安全验证 / 中断页 / 账号管理）
+host-suffix,account.live.com,DIRECT
+host-suffix,account.microsoft.com,DIRECT
+
+# >> Rewards 积分 API（dapi 任务全链路）
+host-suffix,rewardsplatform.microsoft.com,DIRECT
