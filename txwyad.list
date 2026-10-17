@@ -1,0 +1,28 @@
+# 微云去广告规则 · 分流规则列表
+# 用途一：整段粘贴到 QX 配置文件的 [filter_local] 区块内
+# 用途二：托管到 GitHub Gist / 任意可直连的 HTTP 服务器后，
+#         在 QX「风车 → 分流 → 引用(订阅)」中添加链接作为远程分流规则
+# 说明：以 ; 开头的为可选规则，默认不生效
+# 更新：2026-10-16（依据微云 App 实机抓包）
+
+# ========== ① 微云广告核心 ==========
+host-suffix, pgdt.gtimg.cn, reject
+host-suffix, tianshu.gtimg.cn, reject
+host, us.l.qq.com, reject
+host, p.l.qq.com, reject
+host-suffix, sdkreport.e.qq.com, reject
+host, tangram.e.qq.com, reject
+host, gatherer.m.qq.com, reject
+host-suffix, imtmp.net, reject
+host-suffix, im-x.jd.com, reject
+
+# ========== ③ 埋点/统计上报（可选） ==========
+;host-suffix, trace.qq.com, reject
+;host-suffix, rmonitor.qq.com, reject
+;host-suffix, beacon.qq.com, reject
+;host-suffix, pingtas.qq.com, reject
+;host, ping.huatuo.qq.com, reject
+;host, monitor.l.qq.com, reject
+;host, pingjs.qq.com, reject
+;host-suffix, galileotelemetry.tencent.com, reject
+;host, jsonschema.qpic.cn, reject
