@@ -1,0 +1,30 @@
+# ============================================================
+#  贴吧去广告·分流规则 v2 | 2026-10-28
+#  用途: 添加到 QX「分流」→「引用」(或贴入本地 [filter_local])
+#  作用: 主机级掐断第三方广告域名, 无需 mitm, 与重写规则互为兜底
+#
+#  注意: QX 分流规则「后面的优先」, 若你其他分流订阅里排在后面的
+#  geoip/直连规则覆盖了这些域名, 请把本引用移到列表最下方;
+#  重写层(mitm+reject)不受顺序影响, 为主力拦截层。
+# ============================================================
+
+# 穿山甲(字节CSJ)广告SDK — 开屏+信息流主要填充源(含全部子域)
+host-suffix, pangolin-sdk-toutiao-b.com, reject
+# 百度联盟广告/配置
+host, afd.baidu.com, reject
+host, afdconf.baidu.com, reject
+host, mbd.baidu.com, reject
+# 百度广告视频素材CDN / 广告图片CDN
+host, nadvideo2.baidu.com, reject
+host, feed-image.baidu.com, reject
+# 广告事件上报/素材配置(含全部子域)
+host-suffix, xdplt.com, reject
+# 广告聚合SDK(含 entry-su1 / adx-cfg-u1 等全部子域)
+host-suffix, ubixioe.com, reject
+# 字节火山广告风控SDK
+host, mssdk.volces.com, reject
+# 快手广告素材CDN(含全部子域) / 快手广告联盟SDK
+host-suffix, adkwai.com, reject
+host, open.e.kuaishou.com, reject
+# 腾讯广点通SDK
+host, sdkquic.e.qq.com, reject
